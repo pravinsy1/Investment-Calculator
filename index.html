@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investment Calculator</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="components">
+        <div class="head-container">
+          <h1>Calculate Investments</h1>
+        </div>
+
+        <!-- segmented-control -->
+        <div class="segmented-control">
+          <input type="radio" name="radio2" id="tab-1" checked />
+          <label for="tab-1" class="segmented-control__1"> <p>SIP</p></label>
+
+          <input type="radio" name="radio2" id="tab-2" />
+          <label for="tab-2" class="segmented-control__2"><p>Lumpsum</p></label>
+
+          <div class="segmented-control__color"></div>
+        </div>
+
+        <!-- SLIDER -->
+
+        <div class="slider">
+          <h2>
+            Monthly Investment
+
+            <span class="slider__tooltip" id="value">1000 &#8377;</span>
+          </h2>
+          <!-- <input
+            type="range"
+            min="500"
+            max="100000"
+            value="25000"
+            class="slider__box slider__color"
+            id="range"
+          /> -->
+          <div class="slider__box">
+            <span class="slider__btn" id="monthlyInvestment"></span>
+            <span class="slider__color"></span>
+          </div>
+        </div>
+
+        <div class="slider2 hide" onclick="switchTab()">
+          <div class="slider">
+            <h2>
+              Total Investment
+              <span class="slider__tooltip">50000 &#8377;</span>
+            </h2>
+            <div class="slider__box">
+              <span class="slider__btn" id="totalInvestment"></span>
+              <span class="slider__color"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider">
+          <h2>
+            Expected return rate (p.a)
+            <span class="slider__tooltip">12%</span>
+          </h2>
+          <div class="slider__box" id="intrate">
+            <span class="slider__btn"></span>
+            <span class="slider__color"></span>
+          </div>
+        </div>
+
+        <div class="slider">
+          <h2>
+            Time period
+            <span class="slider__tooltip" id="time_period">10 Year</span>
+          </h2>
+          <div class="slider__box">
+            <span class="slider__btn" id="find"></span>
+            <span class="slider__color"></span>
+          </div>
+        </div>
+
+        <!-- RESULT -->
+        <div class="result-container" id="result">
+          <h2>
+            Invested amount
+            <span class="output" id="amt_invested">120000 &#8377;</span>
+          </h2>
+          <h2>
+            Est. returns
+            <span class="output" id="est_return">12%</span>
+          </h2>
+          <h2>
+            Total value
+            <span class="output" id="total_value">232339 &#8377;</span>
+          </h2>
+        </div>
+
+        <!-- BUTTON -->
+        <div class="btn btn__secondary" id="calculate"><p>Evaluate</p></div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; Pravin Yadav.</p>
+    </footer>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
